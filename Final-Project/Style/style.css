@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;600;700&display=swap');
+
+:root{
+    --bg: hsl(38,50%,97%);
+    --blue: HSL(216, 91%, 58%);
+    --twitterBlue: HSL(203, 89%, 53%);
+    --black: HSL(0, 0%, 5%);
+    --grey: hsl(0, 0%, 50%);
+    --white: hsl(0, 0%, 100%);
+    --lightgrey: hsl(0, 0%, 78%);
+    --lightblue: hsl(180, 60%, 90%);
+    --gold: hsl(38, 100%, 57%);
+    --swirl: hsl(38, 8%, 80%);
+}
+
+*{
+    scroll-behavior: smooth;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* burger and header  */
+header {
+    background-color: var(--bg);
+}
+.navbar {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: var(--blue);
+    font-weight: 700;
+    font-style: italic;
+}
+
+a {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grey); 
+    margin-top: 0;
+}
+
+#moblie-nav {
+    display: none;
+    list-style: none;
+    padding: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#moblie-nav.show {
+    display: block;
+    opacity: 1;
+}
+
+#moblie-nav a {
+    text-decoration: none;
+    color: var(--grey);
+    transition: color 0.3s ease-in-out;
+}
+
+#moblie-nav a:hover {
+    color: var(--blue);
+}
+
+#nav-trigger {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#nav-trigger:hover {
+    transform: scale(1.1);
+}
+
+/* twitter style */
+.twitter {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.75rem;
+    width: 100%;
+    background-color: var(--twitterBlue);
+    color: white;
+    border-radius: 0.25rem;
+    border: 0;
+    font-size: medium;  
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.twitter:hover {
+    background-color: var(--blue);
+}
+
+.btn-learn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    width: 100%;
+    color: var(--blue);
+    border-radius: 0.25rem;
+    border: 0;
+    font-size: large; 
+    font-weight: 600; 
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-learn:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* main section style */
+#main {
+    background-color: var(--bg);
+}
+
+.main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.Hero{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+.main h1 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.main p {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grey); 
+    margin-top: 0;  
+}
+
+.main strong {
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.Avatars {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    height: 45px;
+}
+
+.avatar {
+    margin-right: -22.5px;
+}
+
+.Avatars :not(:last-child) {
+    z-index: 1;
+}
+
+.Avatars :last-child {
+    z-index: 1;
+}
+
+/* section 2 style  */
+#section-2 {
+    background-color: var(--white);
+}
+
+.section-2 {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0.75rem;  
+}
+
+.section-2 h2 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.features{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.5rem;   
+}
+
+.features div {
+    padding: 1rem;
+    border: var(--lightgrey) solid 1px;
+    border-radius: 4px;
+}
+
+.section-2 p {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grey);    
+}
+
+#emoji {
+    font-size: 2rem;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* section 3 style  */
+#section-3 {
+    background-color: var(--lightblue);
+    padding-bottom: 2rem;
+}
+
+.section-3 {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0.75rem;  
+}
+
+.reviews {
+    background-color: var(--white);
+    padding: 1rem;
+    align-self: start;
+}
+
+#reviews {
+    display: grid;
+    grid-gap: 1.5rem; 
+}
+
+.section-3 h2 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.username {
+    padding: 1rem;
+}
+
+.username p {
+    margin: 0;
+    font-size: small;
+}
+
+.section-3 p {
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.profile svg {
+    margin-left: auto;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.like {
+    display: flex;
+}
+
+.like p {
+    margin-left: 4px;
+}
+
+/* section 4 style  */
+#section-4 {
+    background-color: var(--white);
+    padding-bottom: 3rem;
+}
+
+.section-4 {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0.75rem;  
+}
+
+.section-4 h2 {
+    text-align: center;
+    font-weight: 700;
+    color: var(--black);
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.section-4 p {
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+p.twitter-growth-text {
+    text-align: center;
+}
+
+.trial {
+    border: var(--gold) solid 1px;
+    border-radius: 4px;
+    background-color: var(--bg);
+    padding: 2rem 2rem;  
+}
+
+.trial strong {
+    font-weight: 700;
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.trial div:first-child {
+    padding: 45rem;
+}
+
+.perks {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.perks p {
+    margin: 0;
+}
+
+.perks svg {
+    min-width: 24px;
+}
+
+/* footer style */
+.footer-background {
+    background-color: var(--lightblue);
+    padding: 2rem;
+}
+
+footer {
+    color: var(--white);
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+footer strong {
+    color: var(--blue);
+    flex: 1;
+    padding-bottom: 1rem;
+    font-style: italic;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--swirl);
+    margin: 1rem 0;
+}
+
+.footer {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+/* New CSS for desktop view */
+@media (min-width: 769px) {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #nav-trigger {
+        display: none;
+    }
+
+    #moblie-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #moblie-nav li {
+        margin-right: 10px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: start;
+        padding: 1rem;
+    }
+
+    .section-1 {
+        margin-right: 3rem;
+    }
+
+    .main {
+        margin-bottom: 3rem;
+    }
+
+    .buttons {
+        display: flex;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);   
+    }
+
+    #reviews {
+        grid-template-columns: repeat(3, 1fr);               
+    }
+
+    #footer {
+        display: flex;
+    }
+    
+    #footer strong, .footer {
+        padding: 0;
+    }
+    
+}
+
+/* Simple CSS Animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.animate-button {
+    animation: fadeInOut 2s infinite;
+}
+
+
+
+
+/* FAQ Styles */
+
+.content {
+    flex: 1;
+}
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer.active {
+    max-height: 500px; 
+}
+
